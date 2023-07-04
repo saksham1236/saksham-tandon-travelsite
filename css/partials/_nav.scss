@@ -1,0 +1,44 @@
+@use "./abstracts" as *;
+
+nav,
+.nav {
+  @include margins-auto;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  background-color: --var(--nav-background);
+  align-items: center;
+  justify-content: space-between;
+
+  &__brand {
+    color: var(--logo-primary);
+  }
+
+  &__links__list {
+    display: none;
+    flex-direction: row;
+    list-style-type: none;
+    text-decoration: none;
+
+    @include tablet {
+      display: flex;
+    }
+
+    @include desktop {
+      display: flex;
+    }
+
+    & a {
+      padding: 24px;
+      transition: 0.3s all;
+      &:hover {
+        background-color: var(--logo-secondary);
+        transition: all 0.3s;
+      }
+    }
+
+    &__active {
+      border-bottom: 4px solid var(--logo-secondary);
+    }
+  }
+}

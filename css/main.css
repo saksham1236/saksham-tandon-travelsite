@@ -1,0 +1,235 @@
+:root {
+  --body-background: white;
+  --nav-background: white;
+  --logo-primary: #335576;
+  --logo-secondary: #DB7a4e;
+  --hero-background: #FEFAF5;
+  --text-primary: #000;
+  --text-secondary: #fff;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url(../../assets/fonts/InstrumentSans-Italic-VariableFont_wdthwght.ttf);
+}
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: italic;
+  src: url(../../assets/fonts/InstrumentSans-VariableFont_wdth\,wght.ttf);
+}
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  font-optical-sizing: auto;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img, svg, picture {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: Instrument Sans, Arial, Helvetica, sans-serif;
+  line-height: 150%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-background);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 120%;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  margin: 0;
+  width: 100%;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+section h2 {
+  font-size: 2rem;
+}
+
+button {
+  color: var(--text-secondary);
+  padding: 0.5rem 2rem;
+  background-color: var(--logo-secondary);
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  min-height: 15rem;
+  align-items: flex-end;
+  justify-content: flex-end;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+nav,
+.nav {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  background-color: --var(--nav-background);
+  align-items: center;
+  justify-content: space-between;
+}
+@media (width >= 768px) {
+  nav,
+  .nav {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media (width >= 1280px) {
+  nav,
+  .nav {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+nav__brand,
+.nav__brand {
+  color: var(--logo-primary);
+}
+nav__links__list,
+.nav__links__list {
+  display: none;
+  flex-direction: row;
+  list-style-type: none;
+  text-decoration: none;
+}
+@media (width >= 768px) {
+  nav__links__list,
+  .nav__links__list {
+    display: flex;
+  }
+}
+@media (width >= 1280px) {
+  nav__links__list,
+  .nav__links__list {
+    display: flex;
+  }
+}
+nav__links__list a,
+.nav__links__list a {
+  padding: 24px;
+  transition: 0.3s all;
+}
+nav__links__list a:hover,
+.nav__links__list a:hover {
+  background-color: var(--logo-secondary);
+  transition: all 0.3s;
+}
+nav__links__list__active,
+.nav__links__list__active {
+  border-bottom: 4px solid var(--logo-secondary);
+}
+
+footer, .footer {
+  color: var(--logo-primary);
+  background-color: var(--hero-background);
+  margin: 0;
+  width: 100%;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+@media (width >= 768px) {
+  footer, .footer {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media (width >= 1280px) {
+  footer, .footer {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media (width >= 768px) {
+  footer, .footer {
+    flex-direction: row;
+  }
+}
+@media (width >= 1280px) {
+  footer, .footer {
+    flex-direction: row;
+  }
+}
+footer__heading, .footer__heading {
+  font-size: 2rem;
+}
+footer__time__row, .footer__time__row {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+@media (width >= 768px) {
+  footer__time__row, .footer__time__row {
+    flex-direction: row;
+  }
+}
+@media (width >= 1280px) {
+  footer__time__row, .footer__time__row {
+    flex-direction: row;
+  }
+}
+footer__social, .footer__social {
+  display: flex;
+  flex-direction: column;
+}
+footer__social__list, .footer__social__list {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  list-style-type: none;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+footer__social__icon, .footer__social__icon {
+  height: 2.5rem;
+}
+footer__subheading, .footer__subheading {
+  color: var(--logo-secondary);
+  font-weight: lighter;
+  text-transform: uppercase;
+}/*# sourceMappingURL=main.css.map */

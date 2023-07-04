@@ -1,0 +1,81 @@
+@use "./partials/abstracts" as *;
+
+.hero {
+  @include margins-auto;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--hero-background);
+  width: 100%;
+
+  @include tablet {
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+
+  &__image {
+    max-height: 30rem;
+
+    & img {
+      max-height: 30rem;
+    }
+  }
+
+  &__tagline {
+    color: var(--logo-primary);
+    font-size: 2rem;
+
+    @include tablet {
+      font-size: 3rem;
+    }
+  }
+}
+
+.travel {
+  display: flex;
+  flex-direction: column;
+  @include margins-auto;
+  &__row {
+    display: flex;
+    flex-direction: column;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    @include tablet {
+      flex-direction: row;
+    }
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+  &__card {
+    flex: 1 1 auto;
+    background-size: cover;
+    background-position: 50% 50%;
+    @include hover-card;
+    & h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--text-secondary);
+      text-shadow: 0.25rem 0.25rem 1rem rgba($color: #000, $alpha: 0.5);
+    }
+  }
+
+  &__hawaii {
+    background-image: url(../assets/Images/hawaii.jpg);
+  }
+
+  &__iceland {
+    background-image: url(../assets/Images/iceland.jpg);
+  }
+
+  &__greece {
+    background-image: url(../assets/Images/greece.jpg);
+  }
+}
