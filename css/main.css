@@ -232,4 +232,48 @@ footer__subheading, .footer__subheading {
   color: var(--logo-secondary);
   font-weight: lighter;
   text-transform: uppercase;
+}
+
+[popover]::backdrop {
+  transition: 0.3s all;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+#popover[open] {
+  transition: 0.3s all;
+}
+
+.popover {
+  min-width: 80%;
+  border: none;
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+}
+@media (width >= 768px) {
+  .popover {
+    min-width: 75%;
+  }
+}
+@media (width >= 1280px) {
+  .popover {
+    max-width: 50%;
+  }
+}
+.popover__inputs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.popover input {
+  min-width: 20rem;
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 1rem;
+  flex: 1 1 auto;
+}
+.popover input:focus-visible {
+  border: 2px solid lightblue;
 }/*# sourceMappingURL=main.css.map */

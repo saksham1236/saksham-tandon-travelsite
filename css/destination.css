@@ -1,0 +1,93 @@
+:root {
+  --body-background: white;
+  --nav-background: white;
+  --logo-primary: #335576;
+  --logo-secondary: #DB7a4e;
+  --hero-background: #FEFAF5;
+  --text-primary: #000;
+  --text-secondary: #fff;
+}
+
+.destination {
+  display: flex;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  flex-direction: column;
+}
+@media (width >= 768px) {
+  .destination {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media (width >= 1280px) {
+  .destination {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+.destination__hawaii {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../assets/Images/hawaii.jpg);
+}
+.destination__greece {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../assets/Images/greece.jpg);
+}
+.destination__iceland {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../assets/Images/iceland.jpg);
+}
+.destination__heading {
+  color: var(--text-secondary);
+  text-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.5);
+  font-size: 3rem;
+}
+.destination__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 2rem;
+  flex-wrap: wrap;
+}
+.destination__card {
+  background-color: var(--body-background);
+  padding: 1rem;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+.destination__card__heading {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+.destination__card__list {
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  row-gap: 1rem;
+  width: 100%;
+}
+.destination__card__list li {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: var(--hero-background);
+  padding: 1rem;
+}/*# sourceMappingURL=destination.css.map */

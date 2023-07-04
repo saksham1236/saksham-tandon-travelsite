@@ -36,6 +36,16 @@
     }
 }
 
+@mixin background-center{
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin text-shadow{
+    color: var(--text-secondary);
+    text-shadow: 0.25rem 0.25rem 1rem rgba($color: #000, $alpha: 0.5);
+}
+
 @mixin hover-card {
     &:hover, &:focus{
         position: relative;

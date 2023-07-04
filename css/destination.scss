@@ -1,0 +1,74 @@
+@use './partials/abstracts' as*;
+
+.destination{
+    display: flex;
+    @include margins-auto;
+    flex-direction: column;
+
+    &__hawaii{
+        @include background-center;
+        background-image: url(../assets/Images/hawaii.jpg);
+    }
+
+    &__greece{
+        @include background-center;
+        background-image: url(../assets/Images/greece.jpg)
+    }
+
+    &__iceland{
+        @include background-center;
+        background-image: url(../assets/Images/iceland.jpg)
+    }
+
+    &__heading{
+        @include text-shadow;
+        font-size: 3rem;
+    }
+
+    &__row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 2rem;
+        row-gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    &__card{
+        background-color: var(--body-background);
+        padding: 1rem;
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        border-radius: 5px;
+        border: 1px solid rgba($color: #000000, $alpha: 0.2);
+        box-shadow: 0 4px 4px rgba($color: #000000, $alpha: 0.2);
+        &__heading{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 2rem;
+            width: 100%;
+            border-bottom: 2px solid black;
+        }
+        &__list{
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            row-gap: 1rem;
+            width: 100%;
+            & li{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                background: var(--hero-background);
+                padding: 1rem;
+            }
+        }
+    }
+
+}
