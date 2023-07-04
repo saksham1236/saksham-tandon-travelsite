@@ -38,15 +38,15 @@
           </p>
           <a href="#popover"><button popovertarget="popover">Get Started</button></a>
         </div>
-        <div class = "popover" popover id = "popover">
+        <dialog class = "popover" popover id = "popover">
           <h2>Get Started Today!</h2>
           <div class = "popover__inputs">
             <input type="text" placeholder="Your First Name">
             <input type="text" placeholder="Your Last Name">
             <input type="datetime" placeholder="Pick a date">
-            <a><button pop>Submit</button></a>
+            <a><button popovertarget="popover" popovertargetaction="hide">Submit</button></a>
           </div>
-        </div>
+        </dialog>
         <div class="hero__image">
           <img
             alt="image of a plane going around the earth"
